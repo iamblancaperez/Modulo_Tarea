@@ -18,6 +18,8 @@
 *.rbc
 *.sassc
 .sass-cache
+.DS_Store
+/.DS_Store
 capybara-*.html
 .rspec
 /.bundle
