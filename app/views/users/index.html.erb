@@ -1,0 +1,11 @@
+<%
+	@users.each do |u|
+%>
+
+<div>
+	<%= u.nombre %>
+	<%= link_to "Editar", edit_user_path(u) %>
+	<%= link_to "Eliminar", users_path(u), :method => "DELETE" %>
+</div>
+
+<%end%>
