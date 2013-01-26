@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :nombre
 
-      t.timestamps
+      t.timestamps #crea los parametros de las fechas de creacion y actualizacion de cada campo
     end
   end
 end
