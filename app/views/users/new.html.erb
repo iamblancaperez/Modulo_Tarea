@@ -4,9 +4,9 @@
 		<%= f.label :nombre %>
 		<%= f.text_field :nombre%>
 		<%= f.label :email %>
-		<%= f.text_field :email %>
+		<%= f.email_field :email, :placeholder => "email@domain.com"%>
 		<%= f.label :pass%>
-		<%= f.text_field :pass%>
+		<%= f.password_field :pass, :placeholder => "password"%>
 		<%= f.label "Profesor" %>
 		<%= f.check_box :tipo_usuario %>
 		<%= f.submit %>
