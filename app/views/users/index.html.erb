@@ -12,7 +12,7 @@
 <div>
 	<%= u.nombre %>
 	<%= link_to "Editar", edit_user_path(u) %>
-	<%= link_to "Eliminar", users_path(u), :method => "DELETE" %>
+	<%= link_to "Eliminar", users_path(u), :confirm => '¿Estas seguro?',:method => "DELETE"%>
 	<%= link_to "Ver", user_path(u) %>
 </div>
 
