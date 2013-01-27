@@ -1,3 +1,10 @@
+<div>
+	<h2>Usuarios</h2>
+	<%=link_to "Añadir Usuarios", new_user_path() %>
+</div>
+
+
+
 <%
 	@users.each do |u|
 %>
@@ -6,6 +13,7 @@
 	<%= u.nombre %>
 	<%= link_to "Editar", edit_user_path(u) %>
 	<%= link_to "Eliminar", users_path(u), :method => "DELETE" %>
+	<%= link_to "Ver", user_path(u) %>
 </div>
 
 <%end%>

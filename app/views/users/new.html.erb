@@ -1,2 +1,15 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h2>Nuevo Usuario</h2>
+<div>
+	<%=form_for @user do |f| %>
+		<%= f.label :nombre %>
+		<%= f.text_field :nombre%>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+		<%= f.label :pass%>
+		<%= f.text_field :pass%>
+		<%= f.label "Profesor" %>
+		<%= f.check_box :tipo_usuario %>
+		<%= f.submit %>
+	<%end%>
+	<%=link_to "Back", @user %>
+</div>

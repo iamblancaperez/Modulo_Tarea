@@ -1,2 +1,16 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+
+	<div>
+	<%= form_for @user do |f| %>
+		<%= f.label :nombre %>
+		<%= f.text_field :nombre %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :pass %>
+		<%= f.text_field :pass %>
+
+		<%= f.check_box :tipo_usuario %>
+		<%= f.submit %>
+	<%end%>
+	</div>

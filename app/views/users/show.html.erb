@@ -1,0 +1,10 @@
+<div>
+	<div>Nombre</div>
+	<div><%= @user.nombre %></div>
+	<div>Email</div>
+	<div><%= @user.email %></div>
+
+	<div>Instructor</div>
+	<div><%= @user.tipo_usuario? ? "Profesor" : "Alumno" %></div>
+	<div><%=link_to "Back", users_path %></div>
+</div>
