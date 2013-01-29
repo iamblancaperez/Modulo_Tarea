@@ -1,4 +1,4 @@
-
+	<h2>Editar Usuario</h2>
 	<div>
 	<%= form_for @user do |f| %>
 		<%= f.label :nombre %>
@@ -10,7 +10,11 @@
 		<%= f.label :pass %>
 		<%= f.text_field :pass %>
 
+		<%= f.label :tipo_usuario, "¿Instructor?" %>
 		<%= f.check_box :tipo_usuario %>
+		<br>
+		<br>
 		<%= f.submit %>
 	<%end%>
 	</div>
+	<div class="btn btn-inverse"><%=link_to "Back", @user %></div>
