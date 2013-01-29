@@ -1,15 +1,25 @@
 <div>
 	<h2>Usuarios</h2>
-	<%=link_to "Añadir Usuarios", new_user_path() %>
+	<div class = "btn"> <%=link_to "Añadir Usuarios", new_user_path() %></div>
 </div>
-<%
-	@users.each do |u|
-%>
-<div>
-	<%= u.nombre %>
-	<%= link_to "Editar", edit_user_path(u) %>
-	<%= link_to "Eliminar", users_path(u), :confirm => '¿Estas seguro?',:method => "DELETE"%>
-	<%= link_to "Ver", user_path(u) %>
+<br>
+<div class="row">
+	<div class="span5">
+	<table class="table">
+	<thead>
+		<th><p class="lead">Nombre</p></th>
+	</thead>
+	<tbody>
+		<% @users.each do |u|%>
+		<tr>
+		<td><p class="lead"><%= u.nombre %></p><td>
+		<td><p class="btn"> <%= link_to "Editar", edit_user_path(u) %></p></td> 
+		<td><p class="btn btn-danger"><%= link_to "Eliminar", users_path(u), :confirm => '¿Estas seguro?',:method => "DELETE"%></p></td>
+		<td><p class="btn "><%= link_to "Ver", user_path(u) %></p></td>
+		<%end%>
+		</tr>
+	</tbody>
+</table>
+	</div>
 </div>
 
-<%end%>

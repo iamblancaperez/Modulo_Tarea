@@ -10,8 +10,9 @@
  *
  *= require_self
  *= require_tree .
+ *
+ *= require bootstrap_and_overrides
  */
-
 body{
   		background-color: #f0f0f0;
   		font-family: Helvetica, Arial;
