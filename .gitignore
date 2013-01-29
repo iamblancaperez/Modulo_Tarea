@@ -7,6 +7,8 @@
 
 # Ignore bundler config
 /.bundle
+# Ignore DS_Store OSX File 
+/**/.DS_Store
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
