@@ -1,7 +1,10 @@
 Tarea::Application.routes.draw do
+  get "login" => "session#login"
+  post "login" => "session#do_login", :as => 'do_login'
+  get "logout" => "session#logout"
+
   resources :users
-  match 'users.:id' => 'users#destroy'
-  root :to => 'users#index'
+  root :to => 'session#login'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

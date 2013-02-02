@@ -5,16 +5,16 @@
 		<%= f.text_field :nombre %>
 
 		<%= f.label :email %>
-		<%= f.text_field :email %>
+		<%= f.email_field :email %>
 
-		<%= f.label :pass %>
-		<%= f.text_field :pass %>
+		<%= f.label :password %>
+		<%= f.text_field :password %>
 
 		<%= f.label :tipo_usuario, "¿Instructor?" %>
 		<%= f.check_box :tipo_usuario %>
 		<br>
 		<br>
 		<%= f.submit %>
-	<%end%>
+	<% end %>
 	</div>
 	<div class="btn btn-inverse"><%=link_to "Back", @user %></div>

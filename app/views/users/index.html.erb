@@ -1,25 +1,27 @@
-<div>
-	<h2>Usuarios</h2>
-	<div class = "btn"> <%=link_to "Añadir Usuarios", new_user_path() %></div>
-</div>
-<br>
-<div class="row">
-	<div class="span5">
-	<table class="table">
-	<thead>
-		<th><p class="lead">Nombre</p></th>
-	</thead>
-	<tbody>
+		<div>
+		<h2>Usuarios</h2>
+		<div class   = "btn"> <%=link_to "Añadir Usuarios", new_user_path() %></div>
+		</div>
+		<br>
+		<div class   ="row">
+		<div class   ="span5">
+		<table class ="table">
+		<thead>
+		<tr>
+		<th><p class ="lead">Nombre</p></th>
+		</tr>
+		</thead>
+		<tbody>
 		<% @users.each do |u|%>
 		<tr>
-		<td><p class="lead"><%= u.nombre %></p><td>
-		<td><p class="btn"> <%= link_to "Editar", edit_user_path(u) %></p></td> 
-		<td><p class="btn btn-danger"><%= link_to "Eliminar", users_path(u), :confirm => '¿Estas seguro?',:method => "DELETE"%></p></td>
-		<td><p class="btn "><%= link_to "Ver", user_path(u) %></p></td>
-		<%end%>
+		<td><p class ="lead"><%= u.nombre %></p><td>
+		<td><p class ="btn"> <%= link_to "Editar", edit_user_path(u) %></p></td> 
+		<td><p class ="btn btn-danger"><%= link_to "Eliminar", user_path(u), :confirm => '¿Estas seguro?',:method => "DELETE"%></p></td>
+		<td><p class ="btn "><%= link_to "Ver", user_path(u) %></p></td>
 		</tr>
-	</tbody>
-</table>
-	</div>
-</div>
-
+		<%end%>
+		</tbody>
+		</table>
+		</div>
+		</div>
+		

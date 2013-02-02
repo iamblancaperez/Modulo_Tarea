@@ -1,18 +1,14 @@
 <h2>Nuevo Usuario</h2>
 <hr>
 <div>
-	<%=form_for @user do |f| %>
+	<%= form_for @user, :path => do_login_path() do |f| %>
 		<%= f.label :nombre %>
 		<%= f.text_field :nombre %>
 		<%= f.label :email %>
 		<%= f.email_field :email, :placeholder => "email@domain.com" %>
 		<%= f.label :password%>
 		<%= f.password_field :password, :placeholder => "password" %>
-		<%= f.label "Profesor" %>
-		<%= f.check_box :tipo_usuario %>
 		<br>
 		<br>
 		<%= f.submit %>
 	<% end %>
-	<div class="btn btn-inverse"><%= link_to "Back", @user %></div>
-</div>
